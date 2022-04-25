@@ -8,7 +8,7 @@ import { ADD_TO_LIST } from "../actions/animeListActions"
 const initialState={
     animeList:[]
 }
-export function addToList(state=initialState,action){
+export function animeListReducer(state=initialState,action){
     switch(action.type){
         case ADD_TO_LIST:
             const updatedState=[...state.animeList,action.payload]
@@ -16,7 +16,7 @@ export function addToList(state=initialState,action){
                 animeList:updatedState
             }
         default:
-            break;
+            return state
     }
     
 }
