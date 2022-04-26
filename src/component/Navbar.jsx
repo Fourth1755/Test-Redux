@@ -18,7 +18,7 @@ const Navbar=()=>{
                             <Link to='/' class="nav-link active" aria-current="page">Home</Link>
                         </li>
                         <li class="nav-item">
-                            <Link to='/animeList' class="nav-link">Anime List<span>{animeList.reduce((sum,item)=>sum+item.id,0)}</span></Link>
+                            <Link to='/animeList' class="nav-link">Anime List<span>{animeList.reduce((sum,item)=>sum+1,0)}</span></Link>
                         </li>
                         <li class="nav-item">
                             <Link to='/anime' class="nav-link">Anime</Link>

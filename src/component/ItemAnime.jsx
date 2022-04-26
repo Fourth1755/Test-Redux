@@ -7,7 +7,7 @@ const ItemAnime =({anime})=>{
         <div>
             <h2>{anime.name}</h2>
             <p>{anime.year}</p>
-            <button>Add to list</button>
+            <button onClick={()=>dispatch(addToList({...anime,quantity:1}))}>Add to list</button>
         </div>
     );
 }
