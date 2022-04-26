@@ -6,7 +6,8 @@
         "studios":"A-1 Pictures",
         "seasonal":"Summer",
         "episodes":25,
-        "image":"https://cdn.myanimelist.net/images/anime/11/39717.jpg"
+        "image":"https://cdn.myanimelist.net/images/anime/11/39717.jpg",
+        "quantity":1
     },
     {
         "id":2,
@@ -15,7 +16,8 @@
         "studios":"MAPPA",
         "seasonal":"Spring",
         "episodes":25,
-        "image":"https://cdn.myanimelist.net/images/anime/10/47347.jpg"
+        "image":"https://cdn.myanimelist.net/images/anime/10/47347.jpg",
+        "quantity":1
 
     },
     {
@@ -25,7 +27,8 @@
         "studios":"Bones",
         "seasonal":"Winter",
         "episodes":12,
-        "image":"https://cdn.myanimelist.net/images/anime/9/77809.jpg"
+        "image":"https://cdn.myanimelist.net/images/anime/9/77809.jpg",
+        "quantity":1
     },
     {
         "id":4,
@@ -34,7 +37,8 @@
         "studios":"White Fox",
         "seasonal":"Spring",
         "episodes":25,
-        "image":"https://cdn.myanimelist.net/images/anime/11/79410.jpg"
+        "image":"https://cdn.myanimelist.net/images/anime/11/79410.jpg",
+        "quantity":1
     },
     {
         "id":5,
@@ -43,7 +47,8 @@
         "studios":"CloverWorks",
         "seasonal":"Winter",
         "episodes":12,
-        "image":"https://cdn.myanimelist.net/images/anime/1179/119897.jpg"
+        "image":"https://cdn.myanimelist.net/images/anime/1179/119897.jpg",
+        "quantity":1
     },
     {
         "id":6,
@@ -52,7 +57,8 @@
         "studios":"Bones",
         "seasonal":"Spring",
         "episodes":64,
-        "image":"https://cdn.myanimelist.net/images/anime/1223/96541.jpg"
+        "image":"https://cdn.myanimelist.net/images/anime/1223/96541.jpg",
+        "quantity":1
     },
     {
         "id":7,
@@ -61,7 +67,8 @@
         "studios":"White Fox",
         "seasonal":"Spring",
         "episodes":24,
-        "image":"https://cdn.myanimelist.net/images/anime/5/73199.jpg"
+        "image":"https://cdn.myanimelist.net/images/anime/5/73199.jpg",
+        "quantity":1
     },
     {
         "id":8,
@@ -70,7 +77,8 @@
         "studios":"Sunrise",
         "seasonal":"Fall",
         "episodes":25,
-        "image":"https://cdn.myanimelist.net/images/anime/5/50331.jpg"
+        "image":"https://cdn.myanimelist.net/images/anime/5/50331.jpg",
+        "quantity":1
     },
     {
         "id":9,
@@ -79,6 +87,7 @@
         "studios":"White Fox",
         "seasonal":"Spring",
         "episodes":25,
-        "image":"https://cdn.myanimelist.net/images/anime/1171/109222.jpg"
+        "image":"https://cdn.myanimelist.net/images/anime/1171/109222.jpg",
+        "quantity":1
     }
 ]

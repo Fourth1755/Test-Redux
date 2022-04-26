@@ -5,8 +5,9 @@ import reportWebVitals from './reportWebVitals';
 import MyRoute from './MyRoute';
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
+import {devToolsEnhancer} from 'redux-devtools-extension'
 import {animeListReducer} from './reducers/animeListReducer'
-const store=createStore(animeListReducer)
+const store=createStore(animeListReducer,devToolsEnhancer())
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

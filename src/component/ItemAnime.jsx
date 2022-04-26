@@ -4,10 +4,13 @@ import { addToList } from "../actions/animeListActions";
 const ItemAnime =({anime})=>{
     const dispatch=useDispatch()
     return(
-        <div>
-            <h2>{anime.name}</h2>
-            <p>{anime.year}</p>
-            <button onClick={()=>dispatch(addToList({...anime,quantity:1}))}>Add to list</button>
+        <div className="card" style={{width: '14rem',margin: '20px'}}>
+            <img className="card-img-top" src={anime.image} alt="Card image cap"/>
+            <div className="card-body">
+                <h5 className="card-title">{anime.name}</h5>
+                <p className="card-text">{anime.year}</p>
+                <button onClick={()=>dispatch(addToList({...anime,quantity:1}))} className="btn btn-primary">Add to list</button>
+            </div>
         </div>
     );
 }

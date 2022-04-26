@@ -11,9 +11,19 @@ const initialState={
 export function animeListReducer(state=initialState,action){
     switch(action.type){
         case ADD_TO_LIST:
-            const updatedState=[...state.animeList,action.payload]
+            let updatedList
+            const foundItem = state.animeList.find(item=>item.id===action.payload.id)
+            if(!foundItem){
+                updatedList=[...state.animeList,action.payload]
+            }else{
+                updatedList=state.animeList.map(item=>({
+                    ...item,
+                    quantity:item.id=== foundItem.id ? item.quantity+1 :item.quantity
+                }))
+            }
             return{
-                animeList:updatedState
+                ...state,
+                animeList:updatedList
             }
         default:
             return state
