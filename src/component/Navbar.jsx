@@ -17,13 +17,13 @@ const Navbar=()=>{
                         <li className="nav-item">
                             <Link to='/' className="nav-link active" aria-current="page">Home</Link>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <Link to='/animeList' className="nav-link">Anime List<span>{animeList.reduce((sum,item)=>sum+item.quantity,0)}</span></Link>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <Link to='/anime' className="nav-link">Anime</Link>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <Link to='/signin' className="nav-link">Sign in</Link>
                         </li>
                     </ul>
