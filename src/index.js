@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import MyRoute from './MyRoute';
-import {createStore} from 'redux'
+import {createStore,applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
-import {devToolsEnhancer} from 'redux-devtools-extension'
-import {animeListReducer} from './reducers/animeListReducer'
-const store=createStore(animeListReducer,devToolsEnhancer())
+import {composeWithDevTools} from 'redux-devtools-extension'
+import {rootReducer} from './reducers/rootReducer'
+import thunk from 'redux-thunk'
+const middleware =[thunk]
+const store=createStore(rootReducer,composeWithDevTools(applyMiddleware(...middleware)))
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

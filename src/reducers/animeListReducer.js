@@ -6,31 +6,23 @@ import { DELETE_LIST } from "../actions/animeListActions"
 //         year:'',
 //         image:''
 //     }
-const initialState={
-    animeList:[]
-}
+const initialState=[]
 export function animeListReducer(state=initialState,action){
     switch(action.type){
         case ADD_TO_LIST:
             let updatedList
-            const foundItem = state.animeList.find(item=>item.id===action.payload.id)
+            const foundItem = state.find(item=>item.id===action.payload.id)
             if(!foundItem){
-                updatedList=[...state.animeList,action.payload]
+                updatedList=[...state,action.payload]
             }else{
-                updatedList=state.animeList.map(item=>({
+                updatedList=state.map(item=>({
                     ...item,
                     quantity:item.id=== foundItem.id ? item.quantity+1 :item.quantity
                 }))
             }
-            return{
-                ...state,
-                animeList:updatedList
-            }
+            return updatedList
         case DELETE_LIST:
-            return{
-                ...state,
-                animeList:state.animeList.filter(item=>item.id!==action.payload)
-            }
+            return  state.filter(item=>item.id!==action.payload)            
         default:
             return state
     }
