@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {useSelector} from 'react-redux'
 const Navbar=()=>{
     const animeList =useSelector((state)=>state.animeList)
-
+    const {user} =useSelector((state)=>state.auth)
     return(
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -17,14 +17,17 @@ const Navbar=()=>{
                         <li className="nav-item">
                             <Link to='/' className="nav-link active" aria-current="page">Home</Link>
                         </li>
-                        <li className="nav-item">
+                        {user && <li className="nav-item">
                             <Link to='/animeList' className="nav-link">Anime List<span>{animeList.reduce((sum,item)=>sum+item.quantity,0)}</span></Link>
                         </li>
+                        }
                         <li className="nav-item">
                             <Link to='/anime' className="nav-link">Anime</Link>
                         </li>
+                        
                         <li className="nav-item">
-                            <Link to='/signin' className="nav-link">Sign in</Link>
+                            {user ? <Link to='/signout' className="nav-link">Sign Out</Link>:
+                            <Link to='/signin' className="nav-link">Sign in</Link>}
                         </li>
                     </ul>
                     </div>
