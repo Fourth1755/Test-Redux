@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import {useSelector} from 'react-redux'
+import {useSelector,useDispatch} from 'react-redux'
+
+import {setAuth} from '../actions/authActions'
+import {setList} from '../actions/animeListActions'
 const Navbar=()=>{
     const animeList =useSelector((state)=>state.animeList)
     const {user} =useSelector((state)=>state.auth)
+    const dispatch = useDispatch();
+    function signOut(){
+        dispatch(setAuth(null))
+        dispatch(setList([]))
+    }
     return(
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,7 +34,7 @@ const Navbar=()=>{
                         </li>
                         
                         <li className="nav-item">
-                            {user ? <Link to='/signout' className="nav-link">Sign Out</Link>:
+                            {user ? <button onClick={signOut} className="nav-link">Sign Out</button>:
                             <Link to='/signin' className="nav-link">Sign in</Link>}
                         </li>
                     </ul>

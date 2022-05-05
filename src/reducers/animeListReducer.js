@@ -1,5 +1,6 @@
 import { ADD_TO_LIST } from "../actions/animeListActions" 
 import { DELETE_LIST } from "../actions/animeListActions"
+import { SET_LIST } from "../actions/animeListActions"
 //      {
 //         id:'',
 //         name:'',S
@@ -22,7 +23,10 @@ export function animeListReducer(state=initialState,action){
             }
             return updatedList
         case DELETE_LIST:
-            return  state.filter(item=>item.id!==action.payload)            
+            return  state.filter(item=>item.id!==action.payload)
+        case SET_LIST:
+            //console.log("---------------------->",action.payload)
+            return action.payload        
         default:
             return state
     }

@@ -10,7 +10,6 @@ const Signin=()=>{
     const {loading,error} =useSelector(state=>state.status)
     return(
         <div className="container">
-            <form>
                 <div class="mb-3">
                     <label class="form-label">Email address</label>
                     <input type="email" class="form-control" name='email' value={email} onChange={e=>setEmail(e.target.value)}/>
@@ -21,7 +20,6 @@ const Signin=()=>{
                 </div>
                 <button onClick={()=>dispatch(fetchAuthAsync(email,password))}>{loading ? "Loading": "Submit"}</button>    
                 {error && <p style={{color:'red',fontSize:'12'}}>{error}</p>}
-            </form>
         </div>
     );
 }
