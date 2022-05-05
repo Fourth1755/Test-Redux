@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {useDispatch} from 'react-redux'
+import {useDispatch,useSelector} from 'react-redux'
 import {fetchAuthAsync} from '../actions/authActions'
 
 const Signin=()=>{
@@ -7,6 +7,7 @@ const Signin=()=>{
     const [password,setPassword]=useState('')
 
     const dispatch=useDispatch()
+    const {loading,error} =useSelector(state=>state.status)
     return(
         <div className="container">
             <form>
@@ -18,7 +19,8 @@ const Signin=()=>{
                     <label class="form-label">Password</label>
                     <input type="password" class="form-control" name='password' value={password} onChange={e=>setPassword(e.target.value)} />
                 </div>
-                <button onClick={dispatch(fetchAuthAsync(email,password))}>Submit</button>    
+                <button onClick={()=>dispatch(fetchAuthAsync(email,password))}>{loading ? "Loading": "Submit"}</button>    
+                {error && <p style={{color:'red',fontSize:'12'}}>{error}</p>}
             </form>
         </div>
     );

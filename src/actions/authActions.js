@@ -1,5 +1,6 @@
 import {startFetch,endFetch,errorFetch} from '../actions/statusAction'
 import {signin} from '../api/user'
+
 export const SET_AUTH='SET_AUTH'
 
 export function setAuth(user){

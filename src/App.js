@@ -8,7 +8,6 @@ import {useSelector} from "react-redux"
 const UnAuthApp=()=>{
   return(
       <Switch>
-          <Route path="/" exact component={App}/>
           <Route path="/signin" exact component={Signin}/>
           <Route path="/anime" exact component={Anime}/>
       </Switch>
@@ -17,7 +16,6 @@ const UnAuthApp=()=>{
 const AuthApp=()=>{
   return(
     <Switch>
-        <Route path="/" exact component={App}/>
         <Route path="/signin" exact component={Signin}/>
         <Route path="/animeList" exact component={AnimeList}/>
         <Route path="/anime" exact component={Anime}/>
